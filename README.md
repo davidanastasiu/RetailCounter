@@ -35,7 +35,9 @@ Download the track 4 dataset from the [2023 AI City Challenge](http://https://ww
 
 ## Reproduce results with pre-trained detector
 ### Prepare testing dataset
-If you do not want to train detector, only ``AIC23_Track4_TestA.zip`` (or TestB) is sufficient.
+If you do not want to train detector, You can download pre train
+[here](https://drive.google.com/file/d/1VheHPe_CrfjNKYTv1BauhItZkiJ5qa_m/view?usp=share_link)ed model form  
+only ``AIC23_Track4_TestA.zip`` (or TestB) is sufficient.
 
 ```bash
 export TRACK_4_DATA_ROOT={/path/to/track_4/root_dir}
