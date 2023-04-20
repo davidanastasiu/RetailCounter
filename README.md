@@ -112,6 +112,7 @@ python download_pretrained_models.py
 python create_dataset.py --t_4_track {/path/to/AIC_Track4/Train_SynData}
 ```
 ![Dataset](images/Dataset.png)
+
 4. Train detector
 In order to train the detector you need to follow this GitHub repo of YOLOV8 mentioned below
 
