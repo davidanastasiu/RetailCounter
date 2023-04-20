@@ -185,11 +185,10 @@ def main_worker():
 
     # saving videos
     print('Saving videos...')
-    save_dir_name = 'results'
+    save_dir_name = args.out_dir
     ext_name = '_results.mp4'
     save_base_name = args.video.split('/')[-1]
-    save_name = save_base_name.replace(
-        '.mp4', ext_name) if args.use_mp4 else save_base_name + ext_name
+    save_name = save_base_name if args.use_mp4 else save_base_name + ext_name
     if not os.path.exists(save_dir_name):
         os.makedirs(save_dir_name)
     save_path = os.path.join(save_dir_name, save_name)
