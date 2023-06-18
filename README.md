@@ -21,7 +21,6 @@ Link to downlaod our paper [download](http://davidanastasiu.net/)
 conda create --name aic23 python=3.9.0
 conda activate aic23
 conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch
-git clone https://github.com/davidanastasiu/kndar.git
 cd retailcounter
 python -m pip install -r requirements.txt
 cd ..
