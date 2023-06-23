@@ -8,9 +8,9 @@ parser = argparse.ArgumentParser('ROI detection process!')
 parser.add_argument('--video_id', type=str, default=None, required=True, help='Absolute path file with video id and paths')
 parser.add_argument('--roi_seed', type=int, nargs=2, default=None, help='Seed to found ROI')
 parser.add_argument('--cuda_path', default='/usr/local/cuda-11.3/lib64', type=str, help='device for training')
-parser.add_argument('--extracted_image', type=str, required=True, help='path of extarcted background images')
-parser.add_argument('--store_path', type=str, required=True, help='save the ROI')
-parser.add_argument('--final_store_path', type=str, required=True, help='save Median ROI')
+#parser.add_argument('--extracted_image', type=str, required=True, help='path of extarcted background images')
+#parser.add_argument('--store_path', type=str, required=True, help='save the ROI')
+#parser.add_argument('--final_store_path', type=str, required=True, help='save Median ROI')
 
 args = parser.parse_args()
 
@@ -22,16 +22,22 @@ for vid in vids:
     print('Extracting mean background model for scene:', vid['name'])
     call(['python', 'utils/bckg_subtraction.py',
           os.path.join(inpainting_path, vid['name'], vid['name']+'.mp4'),
-          os.path.join(mean_scenes_path, vid['name'])])
+          os.path.join(mean_scenes_path, vid['name'])
+    ])
 
 ################################################################################
 
 
 ################################################################################
-print('Going to detect ROI')
-for vid in vids:
+#print('Going to detect ROI')
+#for vid in vids:
     print('Detecting ROI for scene:', vid['name'])
-    call(['python', 'utils/detect_tray.py'
+    os.makedirs(os.path.join(rois_path, vid['name']), exist_ok=True)
+    call(['python', 'utils/detect_tray.py', 
+        '--extracted_image',
+        os.path.join(mean_scenes_path, vid['name']),
+        '--store_path',
+        os.path.join(rois_path, vid['name'])
     ])
 ################################################################################
 
@@ -40,6 +46,12 @@ for vid in vids:
 print('Going to detect ROI Median area')
 for vid in vids:
     print('Detecting ROI Median for scene:', vid['name'])
-    call(['python', 'utils/detect_ROI_Median.py'
+    call(['python', 'utils/detect_ROI_Median.py',
+        '--extracted_image',
+        os.path.join(mean_scenes_path, vid['name']),
+        '--store_path',
+        os.path.join(rois_path, vid['name']),
+        '--final_store_path',
+        os.path.join(rois_path, vid['name'], 'rois.json')
     ])
 ################################################################################

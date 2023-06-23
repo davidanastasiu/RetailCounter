@@ -1,0 +1,14 @@
+indir: /mnt/matylda0/ispanhel/Datasets/AIC2022/AIC22_Track4_AutoRetail/TestA/lama_input_11/testA_2
+outdir: /mnt/matylda0/ispanhel/Datasets/AIC2022/AIC22_Track4_AutoRetail/TestA/inpainting_11/testA_2
+model:
+  path: /home/vojtech/WORK/AIC2022/complete_solution/image_inpainting/big-lama
+  checkpoint: best.ckpt
+dataset:
+  kind: default
+  img_suffix: .jpg
+  pad_out_to_modulo: 8
+device: cuda
+out_key: inpainted
+out_vid_width: 1920
+out_vid_height: 1080
+out_vid_fps: 60

@@ -1,0 +1,3 @@
+- model.path=/home/vojtech/WORK/AIC2022/to_git/image_inpainting/big-lama
+- indir=/home/vojtech/WORK/AIC2022/to_git/data/lama_input/testA_1
+- outdir=/home/vojtech/WORK/AIC2022/to_git/data/inpainting/testA_1

@@ -18,7 +18,7 @@ store_path = args.store_path
 image_files = [file_name for file_name in os.listdir(extracted_path) if file_name.endswith('.png')]
 
 # Iterate over the image files and read each one using cv2.imread()
-for file_name in image_files:
+for file_name in sorted(image_files, key=lambda x: int(x.split('.')[0])):
     image_path = os.path.join(extracted_path, file_name)
     img = cv2.imread(image_path)
     img = cv2.resize(img, (432, 240))

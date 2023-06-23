@@ -140,8 +140,8 @@ class Predictor(object):
         scores = output[:, 4] * output[:, 5]
         vis_res = vis(img, bboxes, scores, cls, cls_conf, self.cls_names)
         timestamp = int(time.time())
-        image_name = f"output/output_{timestamp}.png"
-        matplotlib.image.imsave(image_name, vis_res)
+        #image_name = f"output/output_{timestamp}.png"
+        #matplotlib.image.imsave(image_name, vis_res)
 
 
         return vis_res

@@ -65,7 +65,6 @@ for vid in vids:
 
 ################################################################################
 print('Going to proceede Video inpanting')
-os.chdir('video_inpainting')
 os.environ['PYTHONPATH'] = os.getcwd()
 call(['python', 'Video_inpainting/video_inpainting.py'])
 ################################################################################

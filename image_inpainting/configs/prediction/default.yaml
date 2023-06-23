@@ -1,0 +1,18 @@
+indir: no  # to be overriden in CLI
+outdir: no  # to be overriden in CLI
+
+model:
+  path: no  # to be overriden in CLI
+  checkpoint: best.ckpt
+
+dataset:
+  kind: default
+  # img_suffix: .png
+  img_suffix: .jpg
+  pad_out_to_modulo: 8
+
+device: cuda
+out_key: inpainted
+out_vid_width: 1920
+out_vid_height: 1080
+out_vid_fps: 60

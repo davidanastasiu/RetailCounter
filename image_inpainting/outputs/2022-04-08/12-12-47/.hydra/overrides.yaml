@@ -1,0 +1,3 @@
+- model.path=/home/vojtech/WORK/AIC2022/complete_solution/image_inpainting/big-lama
+- indir=/mnt/matylda0/ispanhel/Datasets/AIC2022/AIC22_Track4_AutoRetail/TestA/lama_input_13/testA_5
+- outdir=/mnt/matylda0/ispanhel/Datasets/AIC2022/AIC22_Track4_AutoRetail/TestA/inpainting_13/testA_5

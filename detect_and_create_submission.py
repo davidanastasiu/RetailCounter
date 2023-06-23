@@ -28,7 +28,7 @@ for vid in vids:
            '--tracker', args.tracker,
            '--tsize', str(args.img_size),
            '-f', 'exps/aic_yolox_l.py',
-           '-c', '/data/aicity/aic23/track4/PersonGONE/detector_and_tracker/checkpoints_1/yolo8/best_ckpt.pth'
+           '-c', 'checkpoints/yolox_l/best_ckpt.pth'
 
            ])
 ################################################################################
@@ -36,7 +36,7 @@ for vid in vids:
 ################################################################################
 os.chdir('..')
 
-call(['python', '/data/aicity/aic23/track4/PersonGONE/utils/tracks_roi_frame.py',
+call(['python', 'utils/tracks_roi_frame.py',
       os.path.abspath(os.path.join('detector_and_tracker', 'YOLOX_outputs_1', args.experiment_name)),
       args.submission_name,
       args.video_id

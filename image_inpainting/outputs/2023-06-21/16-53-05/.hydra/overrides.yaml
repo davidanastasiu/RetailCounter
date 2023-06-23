@@ -1,0 +1,3 @@
+- model.path=/data/aicity/david/RetailCounter/image_inpainting/big-lama
+- indir=/data/aicity/david/RetailCounter/data/lama_input/testA_1
+- outdir=/data/aicity/david/RetailCounter/data/inpainting/testA_1

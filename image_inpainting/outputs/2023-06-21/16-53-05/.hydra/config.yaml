@@ -1,0 +1,14 @@
+indir: /data/aicity/david/RetailCounter/data/lama_input/testA_1
+outdir: /data/aicity/david/RetailCounter/data/inpainting/testA_1
+model:
+  path: /data/aicity/david/RetailCounter/image_inpainting/big-lama
+  checkpoint: best.ckpt
+dataset:
+  kind: default
+  img_suffix: .jpg
+  pad_out_to_modulo: 8
+device: cuda
+out_key: inpainted
+out_vid_width: 1920
+out_vid_height: 1080
+out_vid_fps: 60
